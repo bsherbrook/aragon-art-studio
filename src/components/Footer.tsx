@@ -4,7 +4,7 @@ export default function Footer() {
     return (
       <>
         <footer>
-            testing footer
+            <p>testing footer</p>
         </footer>
       </>
     )

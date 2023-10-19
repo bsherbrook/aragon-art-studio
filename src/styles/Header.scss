@@ -1,3 +1,26 @@
-.header-box{
-    color: green;
+.header-box {
+  color: green;
+  padding: 10px;
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo-link{
+        text-decoration: none;
+        color: blue;
+    }
+    .logo-box {
+      .logo {
+        font-size: 20px;
+      }
+    }
+    .nav-box {
+      button {
+        margin-left: 10px;
+        &:hover{
+            cursor: pointer;
+        }
+      }
+    }
+  }
 }

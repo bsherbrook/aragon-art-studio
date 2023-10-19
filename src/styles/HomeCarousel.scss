@@ -1,5 +1,9 @@
 .home-carousel-box {
+  width: 99vw;
   color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .App-header {
     font-size: 1rem;
     text-align: center;
@@ -9,14 +13,16 @@
   .carousel-images {
     position: relative;
     border-radius: 10px;
-    height: 400px;
-    max-width: 650px;
+    width: 100vw;
+    height: 600px;
     margin: auto;
     // overflow: hidden;
   }
   .carousel-images img {
-    width: 99%;
-    height: 99%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
     border-radius: 8px;
     border: #006eff8e solid 2px;
   }
@@ -28,15 +34,18 @@
   .right {
     background-color: #66ccfb75;
     color: #fff;
-    padding: 10px 8px 8px 13px;
-    margin: 0 20px;
+    padding: 10px 6px 8px 12px;
     border-radius: 50%;
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto 10px;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
+    opacity: 70%;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .left {
     left: 0;
@@ -45,18 +54,85 @@
     right: 0;
   }
   .carousel-indicator {
-    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    left: 45vw;
   }
   .dot {
-    background-color: #333;
+    background-color: #f6f5f5;
     width: 15px;
     height: 15px;
     border-radius: 50%;
+    z-index: 10;
+    opacity: 60%;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .active {
     background-color: #20b5fa;
+    opacity: 100%;
+  }
+  #slideText{
+    z-index: 0;
+    font-size: 50px;
+    color: red;
+    position: absolute;
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    overflow: hidden;
+    margin-left: 50px;
+  }
+  @keyframes slidein {
+    from {
+      margin-top: 30%;
+      opacity: 0%;
+      // width: 300%;
+    }
+    to {
+      margin-top: 3%;
+      opacity: 100%;
+      // width: 100%;
+    }
+  }
+  #slideSubText{
+    z-index: 0;
+    font-size: 25px;
+    color: blue;
+    position: absolute;
+    animation-name: slideinsub;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    margin-top: 120px;
+    margin-left: 50px;
+    opacity: 0%;
+  }
+  @keyframes slideinsub {
+    from {
+      margin-top: 30%;
+      opacity: 0%;
+      // width: 300%;
+    }
+    to {
+      margin-top: 8%;
+      opacity: 100%;
+      // width: 100%;
+    }
+  }
+  .testframer{
+    font-size: 50px;
+    color: green;
+    position: absolute;
   }
 }
